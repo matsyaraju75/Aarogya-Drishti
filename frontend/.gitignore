@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/
+*/*/*/node_modules/
+
+# Production build artifacts
+dist/
+*/dist/
+*/*/dist/
+build/
+
+# Python artifacts & virtual environments
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+.venv/
+*/.venv/
+*/*/.venv/
+env/
+venv/
+
+# Environment files
+.env
+.env.local
+*.local
+
+# System files
+.DS_Store
+Thumbs.db

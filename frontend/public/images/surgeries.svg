@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="50%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="scrubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Decorative Circles -->
+  <circle cx="70" cy="60" r="45" fill="#38bdf8" opacity="0.12"/>
+  <circle cx="340" cy="220" r="70" fill="#34d399" opacity="0.15"/>
+  <circle cx="330" cy="60" r="30" fill="#818cf8" opacity="0.1"/>
+
+  <!-- Hospital / Surgical Cross Icon Badge Floating -->
+  <g transform="translate(48, 80)" filter="url(#cardShadow)">
+    <rect width="64" height="64" rx="16" fill="#ffffff"/>
+    <rect x="26" y="16" width="12" height="32" rx="4" fill="#0284c7"/>
+    <rect x="16" y="26" width="32" height="12" rx="4" fill="#0284c7"/>
+  </g>
+
+  <!-- Safe Care Verified Shield Floating -->
+  <g transform="translate(290, 110)" filter="url(#cardShadow)">
+    <circle cx="28" cy="28" r="26" fill="#ffffff"/>
+    <path d="M28 10 L44 17 V29 C44 38 37 45 28 48 C19 45 12 38 12 29 V17 Z" fill="url(#shieldGrad)"/>
+    <path d="M22 28 L26 32 L34 22" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Surgeon Illustration in Center -->
+  <g transform="translate(140, 50)">
+    <!-- Surgical Cap -->
+    <path d="M30 65 Q60 20 90 65 Q100 80 92 88 Q60 82 28 88 Q20 80 30 65 Z" fill="#0369a1"/>
+    <!-- Head / Face -->
+    <ellipse cx="60" cy="95" rx="30" ry="34" fill="url(#skinGrad)"/>
+    <!-- Surgical Mask -->
+    <path d="M33 92 Q60 102 87 92 L84 120 Q60 132 36 120 Z" fill="#ffffff" filter="url(#cardShadow)"/>
+    <line x1="33" y1="96" x2="25" y2="92" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="87" y1="96" x2="95" y2="92" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="36" y1="116" x2="25" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="84" y1="116" x2="95" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Mask Pleat -->
+    <line x1="42" y1="106" x2="78" y2="106" stroke="#e2e8f0" stroke-width="1.5"/>
+    <!-- Eyes and Eyebrows -->
+    <path d="M42 78 Q48 74 54 77" stroke="#475569" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M66 77 Q72 74 78 78" stroke="#475569" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="48" cy="84" r="3" fill="#1e293b"/>
+    <circle cx="72" cy="84" r="3" fill="#1e293b"/>
+    <!-- Neck -->
+    <rect x="50" y="125" width="20" height="15" fill="#f59e0b"/>
+    <!-- Scrubs Shoulders & Torso -->
+    <path d="M10 140 Q60 130 110 140 L125 250 L-5 250 Z" fill="url(#scrubGrad)"/>
+    <!-- V-neck collar -->
+    <path d="M42 140 L60 168 L78 140 Z" fill="#fcd34d"/>
+    <!-- Stethoscope -->
+    <path d="M38 145 C38 185 52 205 60 205 C68 205 82 185 82 145" stroke="#94a3b8" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="60" cy="208" r="8" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+  </g>
+
+  <!-- Bottom Pulse / ECG Glow Line -->
+  <path d="M0 275 L120 275 L135 255 L145 290 L160 265 L170 280 L180 275 L400 275" stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>

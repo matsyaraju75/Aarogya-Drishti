@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #087F8C;
+  --primary-dark: #075B66;
+  --secondary: #2563A6;
+  --accent: #B8E7D0;
+  --background: #F5FAFA;
+  --surface: #FFFFFF;
+  --text-primary: #18313B;
+  --text-secondary: #647681;
+  --border: #DCE8E9;
+  --success: #237A57;
+  --warning: #A96A12;
+  --danger: #B42332;
+}
+
+body {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Lato', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Healthcare UI Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.clinical-badge-a {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #C8E6C9;
+}
+
+.clinical-badge-b {
+  background-color: #FFF8E1;
+  color: #B78103;
+  border: 1px solid #FFE082;
+}
+
+.clinical-badge-c {
+  background-color: #ECEFF1;
+  color: #546E7A;
+  border: 1px solid #CFD8DC;
+}
+
+.clinical-badge-d {
+  background-color: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #FFCDD2;
+}
+
+/* Subtle animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(1.02); }
+}
+
+.pulse-subtle {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
+
+/* Focus styles for WCAG 2.2 AA accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Practo UI Design System Foundations & Semantic Tokens (WCAG 2.2 AA)
+   ========================================================================== */
+:root {
+  /* Practo Core Foundations */
+  --practo-font-family-primary: 'Lato', verdana, sans-serif;
+  --practo-font-size-xs: 13px;
+  --practo-font-size-sm: 14px;
+  --practo-font-size-md: 16px;
+  --practo-font-size-lg: 40px;
+  --practo-font-weight-base: 400;
+  --practo-line-height-base: 1.5;
+
+  /* Practo Palette */
+  --practo-color-text-primary: #414146;
+  --practo-color-text-secondary: #ffffff;
+  --practo-color-text-tertiary: #737382;
+  --practo-color-surface-page: #ffffff;
+  --practo-color-surface-card: #ffffff;
+  --practo-color-surface-strong: #f0f0f5;
+  --practo-color-border-default: #e0e0e5;
+  --practo-color-brand-primary: #199fd9;
+  --practo-color-brand-hover: #1589bb;
+  --practo-color-focus: #199fd9;
+  --practo-color-success: #10b981;
+  --practo-color-warning: #f59e0b;
+  --practo-color-error: #ef4444;
+
+  /* Practo Spacing */
+  --practo-space-1: 5px;
+  --practo-space-2: 6px;
+  --practo-space-3: 8px;
+  --practo-space-4: 10px;
+  --practo-space-5: 15px;
+  --practo-space-6: 20px;
+  --practo-space-7: 25px;
+  --practo-space-8: 30px;
+
+  /* Practo Elevation */
+  --practo-radius-xs: 2px;
+  --practo-radius-sm: 4px;
+  --practo-radius-md: 8px;
+  --practo-radius-lg: 12px;
+  --practo-shadow-1: 0 1px 4px rgb(224 224 229);
+  --practo-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --practo-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Practo UI Specific Components */
+.practo-search-container {
+  background: #ffffff;
+  border: 1px solid #e0e0e5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.practo-search-container:focus-within {
+  border-color: #199fd9;
+  box-shadow: 0 0 0 3px rgba(25, 159, 217, 0.15);
+}
+
+.practo-service-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgb(224 224 229);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.practo-service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(25, 159, 217, 0.14);
+  border-color: #199fd9;
+}
+
+.practo-doctor-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgb(224 224 229);
+  transition: all 0.2s ease;
+}
+
+.practo-doctor-card:hover {
+  border-color: #199fd9;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.practo-recommendation-badge {
+  background-color: #def7ec;
+  color: #03543f;
+  border: 1px solid #bcf0da;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.practo-btn-primary {
+  background-color: #199fd9;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.practo-btn-primary:hover {
+  background-color: #1589bb;
+}
+
+.practo-btn-outline {
+  border: 1px solid #199fd9;
+  color: #199fd9;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 18px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.practo-btn-outline:hover {
+  background-color: #f0f9ff;
+}
+
+.practo-scheme-pill {
+  background-color: #e6f4ea;
+  color: #137333;
+  border: 1px solid #ceead6;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
